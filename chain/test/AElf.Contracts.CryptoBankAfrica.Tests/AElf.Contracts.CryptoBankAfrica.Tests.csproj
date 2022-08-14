@@ -1,0 +1,58 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>AElf.Contracts.CryptoBankAfrica</RootNamespace>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <NoWarn>0436</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AElf.EconomicSystem" Version="1.2.0" />
+    <PackageReference Include="AElf.GovernmentSystem" Version="1.2.0" />
+    <PackageReference Include="coverlet.msbuild" Version="3.1.2"><IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+<PrivateAssets>all</PrivateAssets>
+</PackageReference>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.3.0" />
+    <PackageReference Include="Shouldly" Version="4.0.3" />
+    <PackageReference Include="xunit" Version="2.4.2" />
+    <PackageReference Include="xunit.runner.console" Version="2.4.2"><IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+<PrivateAssets>all</PrivateAssets>
+</PackageReference>
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.5"><IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+<PrivateAssets>all</PrivateAssets>
+</PackageReference>
+    <PackageReference Include="Google.Protobuf" Version="3.21.5" />
+    <PackageReference Include="Google.ProtocolBuffers" Version="2.4.1.555" />
+    <PackageReference Include="Google.Events.Protobuf" Version="1.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AElf.ContractTestKit" Version="1.2.0" />
+    <PackageReference Include="AElf.ContractTestBase" Version="1.2.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ContractMessage Include="..\..\protobuf\authority_info.proto">
+      <Link>Protobuf\Proto\authority_info.proto</Link>
+    </ContractMessage>
+  </ItemGroup>
+  <ItemGroup>
+    <ContractStub Include="..\..\protobuf\crypto_bank_contract.proto">
+      <Link>Protobuf\Proto\crypto_bank_contract.proto</Link>
+    </ContractStub>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\contract\AElf.Contracts.CryptoBankAfrica\AElf.Contracts.CryptoBankAfrica.csproj" />
+    <ProjectReference Include="..\..\src\AElf.Boilerplate.TestBase\AElf.Boilerplate.TestBase.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Google.Protobuf" />
+    <None Remove="Google.ProtocolBuffers" />
+    <None Remove="Google.Events.Protobuf" />
+  </ItemGroup>
+</Project>

@@ -10,8 +10,11 @@
         <PackageReference Include="AElf.Kernel.Core" Version="1.2.0" />
         <PackageReference Include="AElf.EconomicSystem" Version="1.2.0" />
         <PackageReference Include="AElf.GovernmentSystem" Version="1.2.0" />
-        <PackageReference Include="Volo.Abp.Core" Version="5.2.2" />
+        <PackageReference Include="Volo.Abp.Core" Version="5.3.3" />
         <ProjectReference Include="..\AElf.Boilerplate.SystemTransactionGenerator\AElf.Boilerplate.SystemTransactionGenerator.csproj" />
+        <PackageReference Include="Google.Protobuf" Version="3.21.5" />
+        <PackageReference Include="Google.ProtocolBuffers" Version="2.4.1.555" />
+        <PackageReference Include="Google.Events.Protobuf" Version="1.1.0" />
     </ItemGroup>
 
     <PropertyGroup>
@@ -159,5 +162,10 @@
         <ContractStub Include="..\..\protobuf\configuration_contract.proto">
             <Link>Protobuf\Proto\configuration_contract.proto</Link>
         </ContractStub>
+    </ItemGroup>
+    <ItemGroup>
+      <None Remove="Google.Protobuf" />
+      <None Remove="Google.ProtocolBuffers" />
+      <None Remove="Google.Events.Protobuf" />
     </ItemGroup>
 </Project>

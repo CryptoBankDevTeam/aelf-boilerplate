@@ -9,6 +9,11 @@
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
         <DefineConstants>TRACE;UNIT_TEST</DefineConstants>
     </PropertyGroup>
+    <ItemGroup>
+      <None Remove="Google.Protobuf" />
+      <None Remove="Google.ProtocolBuffers" />
+      <None Remove="Google.Events.Protobuf" />
+    </ItemGroup>
     <ItemGroup Label="NuGet package assets">
         <None Pack="true" PackagePath="build\" Include="*.targets;" />
     </ItemGroup>
@@ -16,10 +21,13 @@
         <PackageReference Include="AElf.CSharp.CodeOps" Version="1.2.0" />
         <PackageReference Include="AElf.Runtime.CSharp.Core" Version="1.2.0" />
         <PackageReference Include="AElf.Types" Version="1.2.0" />
+        <PackageReference Include="Google.Protobuf" Version="3.21.5" />
+        <PackageReference Include="Google.ProtocolBuffers" Version="2.4.1.555" />
+        <PackageReference Include="Google.Events.Protobuf" Version="1.1.0" />
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="CommandLineParser" Version="2.8.0" />
-        <PackageReference Include="Volo.Abp.Core" Version="5.2.2" />
+        <PackageReference Include="CommandLineParser" Version="2.9.1" />
+        <PackageReference Include="Volo.Abp.Core" Version="5.3.3" />
     </ItemGroup>
 
     <Target Name="CopyDlls" AfterTargets="AfterBuild">

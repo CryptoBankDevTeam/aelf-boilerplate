@@ -26,4 +26,14 @@
             <Link>Protobuf/Proto/aedpos_contract.proto</Link>
         </ContractReference>
     </ItemGroup>
+    <ItemGroup>
+      <None Remove="Google.Protobuf" />
+      <None Remove="Google.ProtocolBuffers" />
+      <None Remove="Google.Events.Protobuf" />
+    </ItemGroup>
+    <ItemGroup>
+      <PackageReference Include="Google.Protobuf" Version="3.21.5" />
+      <PackageReference Include="Google.ProtocolBuffers" Version="2.4.1.555" />
+      <PackageReference Include="Google.Events.Protobuf" Version="1.1.0" />
+    </ItemGroup>
 </Project>
