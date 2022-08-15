@@ -6,11 +6,11 @@ const AElf = require('aelf-sdk');
 const Wallet = AElf.wallet;
 const sha256 = AElf.utils.sha256;
 
-// address: 65dDNxzcd35jESiidFXN5JV8Z7pCwaFnepuYQToNefSgqk9
-const defaultPrivateKey = 'bdb3b39ef4cd18c2697a920eb6d9e8c3cf1a930570beb37d04fb52400092c42b';
+// address: G1ixCNMTpk2ukQDsw93JTGt2son4YKB9gRaYRGZosNQsRdCxC
+const defaultPrivateKey = '60af52541d2474ee2735cc2dfbca21e2ac71a576b73f3d97c4940442c4e22ffe';
 
 const wallet = Wallet.getWalletByPrivateKey(defaultPrivateKey);
-const aelf = new AElf(new AElf.providers.HttpProvider('http://127.0.0.1:1235'));
+const aelf = new AElf(new AElf.providers.HttpProvider('https://tdvw-test-node.aelf.io'));
 
 if(!aelf.isConnected()) {
     console.error('Blockchain Node is not running.');
@@ -18,7 +18,7 @@ if(!aelf.isConnected()) {
 }
 
 /** use async mode with promise, all chain methods and contract methods are default to be async **/
-const helloWorldContractName = 'AElf.ContractNames.HelloWorldContract';
+const helloWorldContractName = 'AElf.Contracts.CryptoBankAfrica';
 let helloWorldContract = null;
 aelf.chain.getChainStatus().then(({ GenesisContractAddress }) => {
     return aelf.chain.contractAt(GenesisContractAddress, wallet);

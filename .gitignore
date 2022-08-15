@@ -257,6 +257,10 @@ paket-files/
 # Visual Studio Code
 .vscode
 
+# address
+address.json
+address.txt
+
 # CodeRush
 .cr/
 
